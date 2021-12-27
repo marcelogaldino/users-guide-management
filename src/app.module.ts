@@ -8,7 +8,7 @@ import { ConfigModule } from '@nestjs/config';
     ConfigModule.forRoot({ isGlobal: true }),
     UsersModule,
     MongooseModule.forRoot(
-      `mongodb+srv://marcelogaldino:mongodb123@cluster0.q2xoj.mongodb.net/test`,
+      `mongodb+srv://${process.env.MONGO_DB_USERNAME}:${process.env.MONGO_DB_PASSWORD}@cluster0.q2xoj.mongodb.net/test`,
     ),
   ],
   controllers: [],
